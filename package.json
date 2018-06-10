@@ -1,7 +1,7 @@
 {
   "name":         "BigNum",
   "version":      "0.1",
-  "description":  "A wrapper for <a href=http://gmplib.org/>GNU MP Bignum (arbitrary precision math) library</a>.",
+  "description":  "A wrapper for GNU MP Bignum (arbitrary precision math) library.",
   "author":       "",
   "website":      "http://iolanguage.org",
   "readme":       "README.md",
