@@ -1,9 +1,9 @@
 AddonBuilder clone do(
-    hasLib := libSearchPaths detect(path, Directory with(path) files detect(name containsSeq("libgmp")))
-    if(hasLib == nil,
-        writeln("GMP didn't found. Try again after installing it or check if it's available in PATH variable.")
-    )
+	dependsOnHeader("gmp.h")
+	dependsOnFrameworkOrLib("GMP", "gmp")
 
-    dependsOnLib("gmp")
-    dependsOnHeader("gmp.h")
+	debs    atPut("gmp", "libgmp3-dev")
+	ebuilds atPut("gmp", "gmp")
+	pkgs    atPut("gmp", "gmp")
+	rpms    atPut("gmp", "gmp-devel")
 )
